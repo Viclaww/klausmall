@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeroComp from '@/components/HeroComp.vue'
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <HeroComp />
+  </main>
 </template>
