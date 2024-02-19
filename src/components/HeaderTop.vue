@@ -37,8 +37,10 @@ const navLinks = [
     <!-- md:flex w-[50%] hidden justify-between -->
     <div
       :class="[
-        isOpen ? 'w-full' : 'w-0 md:w-[50%]  pointer-events-none md:pointer-events-auto',
-        'absolute pt-[25%] left-0 top-0 border-r border-ash-shade flex flex-col md:border-0 transition-all duration-400 z-10 h-[100vh] md:flex-row md:justify-between md:relative md:pt-0 md:h-auto md:w-full bg-white'
+        isOpen
+          ? 'w-full border-r h-[100vh] pt-[25%]'
+          : 'w-0 h-0 md:w-[50%]  pointer-events-none md:pointer-events-auto',
+        'absolute left-0 top-0  border-ash-shade flex flex-col md:border-0 transition-all duration-400 z-10 md:flex-row md:justify-between md:relative md:pt-0 md:h-auto md:w-full bg-white'
       ]"
     >
       <Link
@@ -47,7 +49,7 @@ const navLinks = [
           isOpen
             ? 'translate-y-0 opacity-100'
             : 'translate-y-3 w-full text-nowrap opacity-0 md:opacity-100',
-          'font-medium transition-all duration-300 hover:text-red-primary py-6 md:py-0 pl-5 text-lg border-b md:border-0 md:text-lg border-ash-shade/40'
+          'font-medium transition-all duration-100 hover:text-red-primary py-6 md:py-0 pl-5 text-lg border-b md:border-0 md:text-lg border-ash-shade/40'
         ]"
         class=""
         :key="link.name"
